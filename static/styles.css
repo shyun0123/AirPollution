@@ -1,0 +1,23 @@
+/* styles.css */
+
+.btn-primary {
+    background-color: blue; /* 파란색 버튼 */
+}
+
+/* 미세먼지 클래스 */
+.good {
+    color: blue; /* 좋음일 때 색상 */
+}
+
+.warning {
+    color: green; /* 보통일 때 색상 */
+}
+
+.bad {
+    color: orange; /* 나쁨일 때 색상 */
+}
+
+.very-bad {
+    color: red; /* 매우 나쁨일 때 색상 */
+}
+

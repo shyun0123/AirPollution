@@ -1,0 +1,35 @@
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
+led_blue = 14
+led_green = 15
+led_yellow = 27
+led_red = 10
+
+# 핀 모드 설정
+GPIO.setup(led_blue, GPIO.OUT)
+GPIO.setup(led_green, GPIO.OUT)
+GPIO.setup(led_yellow, GPIO.OUT)
+GPIO.setup(led_red, GPIO.OUT)
+
+try:
+    for i in range(10):
+        time.sleep(1)
+        GPIO.output(led_blue, 1)
+        time.sleep(1)
+        GPIO.output(led_blue, 0)
+        GPIO.output(led_green, 1)
+        time.sleep(1)
+        GPIO.output(led_green, 0)
+        GPIO.output(led_yellow, 1)
+        time.sleep(1)
+        GPIO.output(led_yellow, 0)
+        GPIO.output(led_red, 1)
+        time.sleep(1)
+        GPIO.output(led_red, 0)
+
+finally:
+    GPIO.cleanup()
